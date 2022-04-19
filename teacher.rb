@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'person'
 # Teacher class inherits from Person
 class Teacher < Person

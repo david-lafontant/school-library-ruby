@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Parent class
 class Person
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -28,6 +26,7 @@ class Person
   def of_age?
     @age >= 18
   end
+
   public
 
   def can_use_services?
