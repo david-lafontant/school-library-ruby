@@ -9,9 +9,9 @@ class Person
 
   # Getter methods
 
-  attr_accessor :name, :age 
-  attr_reader :id
+  attr_accessor :name, :age
 
+  attr_reader :id
 
   # setter methods
 
