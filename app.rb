@@ -19,11 +19,10 @@ class App
   private
 
   def menu
-    until @num < 7 && @num.positive?
-      puts "Please choose an option by entering a number\n1- List all books\n2- List all people\n3- Create a person
+    puts "Please choose an option by entering a number\n1- List all books\n2- List all people\n3- Create a person
 4- Create a book\n5- Create a rental\n6- List all rentals\n7- exit"
-      @num = gets.chomp.to_i
-    end
+    @num = gets.chomp.to_i
+
     case @num.to_i
     when 1 then list_books_flow
     when 2 then list_people_flow
