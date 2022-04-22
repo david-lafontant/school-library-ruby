@@ -29,7 +29,7 @@ run "bundle install" to install dependencies
 
 ### Usage
 
-- Run the command `ruby <filename>`.
+- Run the command `ruby app.rb`.
 
 ## Authors
 
