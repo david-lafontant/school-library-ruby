@@ -3,7 +3,7 @@ class Classroom
     @label = label
     @students = []
   end
-
+  attr_reader :students
   attr_accessor :label
 
   def add_student(student)

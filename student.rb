@@ -1,6 +1,8 @@
 require_relative 'person'
 # Student class inherits from Person
 class Student < Person
+  attr_reader :classroom
+
   def initialize(*args, classroom)
     super
     @classroom = classroom
