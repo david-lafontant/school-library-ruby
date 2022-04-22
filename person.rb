@@ -16,7 +16,15 @@ class Person < Nameable
   end
 
   def correct_name
-	@@ -26,4 +28,8 @@ def can_use_services?
+    @name
+  end
+
+  def can_use_services?
+    of_age? || parent_permission
+  end
+
+  private
+
   def of_age?
     @age >= 18
   end
