@@ -23,9 +23,13 @@ To get a local copy up and running follow these simple example steps.
 
 - Clone this repository to your local computer. Choose the location you prefer.
 
+run "git clone https://github.com/sumairq/school-library-ruby.git"
+run "cd /school-library-ruby"
+run "bundle install" to install dependencies
+
 ### Usage
 
-- Run the command `ruby <filename>`.
+- Run the command `ruby app.rb`.
 
 ## Authors
 
