@@ -5,7 +5,7 @@ require_relative './teacher'
 
 class People
 
-
+attr_accessor :people
 
     def create_teacher
         age = 0
