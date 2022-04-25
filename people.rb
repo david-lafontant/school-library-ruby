@@ -1,3 +1,8 @@
+require_relative './student'
+require_relative './teacher'
+
+
+
 class People
 
 
@@ -18,7 +23,7 @@ class People
         puts 'Teacher created succesfully'
         reset
       end
-      
+
       def create_student
         age = 0
         permision = true
