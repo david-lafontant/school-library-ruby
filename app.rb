@@ -13,6 +13,11 @@ class App
   end
 
   def start
+    File.open("person.txt", "r") do |file|
+    for line in file.readlines()
+      @people.list << line
+    end
+    end
     puts 'Welcome to School Library!'
     menu while @num != 7
   end

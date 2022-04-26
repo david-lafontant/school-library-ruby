@@ -9,7 +9,9 @@ class People
   end
 
   def add_person(person)
-    @list << person.create_person
+    new_person = person.create_person
+    @list << new_person
+    File.open("person.txt", "a") { |f| f.write "\n#{new_person}" }
   end
 
   def filter_with_index(index)
