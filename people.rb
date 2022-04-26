@@ -1,49 +1,56 @@
 require_relative './student'
 require_relative './teacher'
 
-
-
 class People
+  attr_reader :list
 
-attr_accessor :people
+  def initialize
+    @list = []
+  end
 
-    def create_teacher
-        age = 0
-        until age.positive?
-          puts 'age: '
-          age = gets.chomp.to_i
-        end
-        puts 'name:'
-        name = gets.chomp
-        puts 'Specialization:'
-        specialization = gets.chomp
-        teacher = Teacher.new(specialization, age, name)
-        @people.push(teacher)
-        puts teacher.name, teacher.age, teacher.specialization
-        puts 'Teacher created succesfully'
-        reset
-      end
+  def add_person(person)
+    @list << person.create_person
+  end
 
-      def create_student
-        age = 0
-        permision = true
-        input = ''
-        until age.positive?
-          puts 'age:'
-          age = gets.chomp.to_i
-        end
-        puts 'name:'
-        name = gets.chomp
-        if age < 18
-          until %w[Y N].include?(input)
-            puts 'has parents permission?[Y,N]'
-            input = gets.chomp.upcase
-            permision = input == 'Y'
-          end
-        end
-        student = Student.new(nil, age, name, parent_permission: permision)
-        @people.push(student)
-        puts 'Student created succesfuly!'
-        reset
-      end
+  def filter_with_index(index)
+    @list[index]
+  end
+
+  def filter_with_id(id)
+    @list.select { |person| person.id == id }[0]
+  end
 end
+
+class CreatePerson
+  def create_person
+    @age = 0
+    until @age.positive?
+      puts 'age: '
+      @age = gets.chomp.to_i
+    end
+    puts 'Name:'
+    @name = gets.chomp.strip.capitalize
+  end
+end
+
+class CreateStudent < CreatePerson
+  def create_person
+    super
+    permision = true
+    input = ''
+    if @age < 18
+      until %w[Y N].include?(input)
+        puts 'has parents permission?[Y,N]'
+        input = gets.chomp.upcase
+        permision = input == 'Y'
+      end
+    end
+    Student.new(nil, @age, @name, parent_permission: permision)
+  end
+end
+
+class CreateTeacher < CreatePerson
+  def create_person
+    super
+    puts 'Specialization:'
+    specialization = gets.chomp.str
