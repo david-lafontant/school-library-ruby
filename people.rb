@@ -53,7 +53,7 @@ class CreateTeacher < CreatePerson
   def create_person
     super
     puts 'Specialization:'
-    specialization = gets.chomp.str
+    specialization = gets.chomp.strip.capitalize
+    Teacher.new(specialization, @age, @name)
   end
 end
-
