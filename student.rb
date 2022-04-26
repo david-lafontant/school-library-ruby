@@ -8,6 +8,10 @@ class Student < Person
     @classroom = classroom
   end
 
+  def to_s
+    "[Student] #{super} parent permission: #{@parent_permission}"
+  end
+
   def classroom=(classroom)
     @classroom = classroom
     classroom.students.push(self) unless classroom.students.include?(self)
