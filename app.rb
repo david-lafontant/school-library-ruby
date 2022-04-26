@@ -46,7 +46,6 @@ class App
     reset
   end
 
-
   def create_rental
     book_index = -1
     person_index = -1
@@ -89,4 +88,3 @@ class App
     reset
   end
 end
-
