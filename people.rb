@@ -54,3 +54,6 @@ class CreateTeacher < CreatePerson
     super
     puts 'Specialization:'
     specialization = gets.chomp.str
+  end
+end
+
