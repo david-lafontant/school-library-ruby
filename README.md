@@ -39,6 +39,12 @@ run "bundle install" to install dependencies
 - Twitter: [@sumair_qaisar](https://twitter.com/sumair_qaisar)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/sumairq/)
 
+👤 **David Lafontant**
+
+- GitHub: [david-lafontant](https://github.com/david-lafontant)
+- LinkedIn: [David Lafontant](https://www.linkedin.com/in/david-lafontant/)
+- Twitter: [manikatex](https://twitter.com/manikatex)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
