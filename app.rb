@@ -4,6 +4,7 @@ require_relative 'people'
 require_relative 'list_printer'
 require_relative './rental'
 require_relative './save_data'
+require_relative './read_data'
 
 class App
   def initialize
@@ -55,13 +56,15 @@ class App
   def create_rental
     book_index = -1
     person_index = -1
+    list_of_book = read_books_data
     puts 'select a book from the following list by number'
-    ListPrinter.print_list(@books.list)
-    until book_index > -1 && book_index < @books.list.length
+    ListPrinter.print_list(list_of_book)
+    until book_index > -1 && book_index < list_of_book.length
       puts 'book index:'
       book_index = gets.chomp.to_i
     end
     puts 'select a person from the following list by number'
+    list_of_people = 
     ListPrinter.print_list(@people.list)
     until person_index > -1 && person_index < @people.list.length
       puts 'person index:'

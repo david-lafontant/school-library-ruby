@@ -11,6 +11,7 @@ class People
   def add_person(person)
     new_person = person.create_person
     @list << new_person
+    save_people_data(@list)
     File.open("person.txt", "a") { |f| f.write "\n#{new_person}" }
   end
 
