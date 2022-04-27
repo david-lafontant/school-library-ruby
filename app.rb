@@ -31,7 +31,7 @@ class App
     @num = gets.chomp.to_i
 
     case @num.to_i
-    when 1 then ListPrinter.print_list(@books.list)
+    when 1 then ListPrinter.print_list(read_books_data)
     when 2 then ListPrinter.print_list(@people.list)
     when 3 then add_person
     when 4 then @books.add_book
