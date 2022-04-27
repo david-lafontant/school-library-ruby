@@ -3,6 +3,7 @@ require_relative './books'
 require_relative 'people'
 require_relative 'list_printer'
 require_relative './rental'
+require_relative './save_data'
 
 class App
   def initialize
