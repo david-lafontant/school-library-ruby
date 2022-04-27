@@ -68,7 +68,13 @@ class App
     end
     puts 'date: (YYYY/MM/DD): '
     date = gets.chomp
-    Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index))
+    #Changes made
+    #Before
+    #Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index))
+    #After
+    @rentals.push(Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index)))
+    save_rentals_data(@rentals)
+    #End 
     puts 'Rental created succesfully'
     reset
   end
