@@ -1,3 +1,5 @@
+require_relative './save_data'
+
 class Books
   attr_reader :list
 
@@ -17,6 +19,7 @@ class Books
       author = gets.chomp
     end
     @list << Book.new(title, author)
+    save_books(@list)
     puts 'Book created succesfuly'
   end
 
