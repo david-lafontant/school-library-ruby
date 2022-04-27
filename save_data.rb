@@ -6,3 +6,13 @@ def save_books_data(books)
     end
     File.write('books.json', JSON.generate(data))
   end
+
+  def save_rentals_data(rentals)
+    data = []
+    rentals.each do |rental|
+      rental_id ="#{Random.rand(1..1000)}"
+      data.push({ id:rental_id, date: rental.date, person_id: rental.person, book_id: rental.book })
+    end
+    File.write('rentals.json', JSON.generate(data))
+  end
+
