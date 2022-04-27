@@ -15,11 +15,6 @@ class App
   end
 
   def start
-    File.open("person.txt", "r") do |file|
-    for line in file.readlines()
-      @people.list << line
-    end
-    end
     puts 'Welcome to School Library!'
     menu while @num != 7
   end
@@ -77,9 +72,14 @@ class App
     #Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index))
     #After
     @rentals.push(Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index)))
-    save_rentals_data(@rentals)
+    puts @people.list
+    for rental in @rentals do
+      puts rental.person.class
+    end
+    #  save_rentals_data(@rentals)
     #End 
     puts 'Rental created succesfully'
+  
     reset
   end
 

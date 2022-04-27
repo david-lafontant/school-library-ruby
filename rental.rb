@@ -5,6 +5,7 @@ class Rental
     @date = date
     @person = person
     @book = book
+    puts "hi from rental #{date.class}"
     # person.rentals.push(self)
     # book.rentals.push(self)
   end
