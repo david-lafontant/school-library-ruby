@@ -19,7 +19,7 @@ class Books
       author = gets.chomp
     end
     @list << Book.new(title, author)
-    save_books(@list)
+    save_books_data(@list)
     puts 'Book created succesfuly'
   end
 
