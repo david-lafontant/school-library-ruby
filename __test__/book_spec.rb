@@ -19,7 +19,5 @@ describe Book do
       rental = book.add_rental(date, person)
       expect(rental).to be_an_instance_of(Rental)
     end
-
-
   end
 end

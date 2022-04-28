@@ -28,9 +28,6 @@ describe Person do
       expect(person.of_age?).to be(true)
     end
 
-
-
-
     it 'return an object who is an instance of Rental class' do
       person = Person.new(30, 17, 'Sam')
       book = Book.new({ 'title' => 'Ruby in Ruby', 'author' => 'Dr David' })
@@ -38,9 +35,5 @@ describe Person do
       rental = person.add_rentals(date, book)
       expect(rental).to be_an_instance_of(Rental)
     end
-
-
-
-
   end
 end
