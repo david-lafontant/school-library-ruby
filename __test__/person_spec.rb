@@ -23,10 +23,7 @@ describe Person do
       expect(person.can_use_services?).to be(true)
     end
 
-    it 'return true if age is greater or equal to 18' do
-      person = Person.new(30, 17, 'Sam')
-      expect(person.of_age?).to be(true)
-    end
+
 
     it 'return an object who is an instance of Rental class' do
       person = Person.new(30, 17, 'Sam')
