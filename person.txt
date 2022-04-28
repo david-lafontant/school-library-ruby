@@ -1,6 +1,0 @@
-[Student] ID: 299 Name: Sam smith Age: 354 parent permission: true
-[Student] ID: 550 Name: Sdfsdf Age: 123 parent permission: true
-[Teacher] ID: 266 Name: Ghjgh Age: 123 specialization: Uni
-[Teacher] ID: 58 Name: Arif Age: 1231 specialization: Scheicnemaths
-
-[Student] ID: 61 Name: Sdfskd Age: 4554 parent permission: true
