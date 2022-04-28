@@ -31,6 +31,13 @@ run "bundle install" to install dependencies
 
 - Run the command `ruby app.rb`.
 
+### Run the tests 
+
+- install spec gem by typing : `gem install rspec`
+- Go to the `__test__` directory by typing  `cd __test__`
+- run all the test by `rspec spec .`
+- run a test `rspec spec [filename]`, example ro run the `classroom_spec.rb` type `rspec spec classroom_spec.rb`
+
 ## Authors
 
 👤 **Sumair Qaisar**
