@@ -1,7 +1,6 @@
-require_relative './save_data'
 
 class Books
-  attr_reader :list
+  attr_accessor :list
 
   def initialize
     @list = []
@@ -18,12 +17,15 @@ class Books
       puts 'Author'
       author = gets.chomp
     end
-    @list << Book.new(title, author)
-    save_books_data(@list)
+    @list << Book.new({ 'title' => title, 'author' => author })
     puts 'Book created succesfuly'
   end
 
   def filter_with_index(index)
     @list[index]
+  end
+
+  def filter_with_title(title)
+    @list.select { |book| book.title.eql?(title) }[0]
   end
 end
