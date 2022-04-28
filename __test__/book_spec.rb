@@ -7,7 +7,7 @@ describe Book do
       expect(book).to be_an_instance_of(Book)
     end
     it 'return the correct title and author' do
-        book = Book.new({ 'title' => 'Learn Ruby', 'author' => 'Dr Sam' })
+      book = Book.new({ 'title' => 'Learn Ruby', 'author' => 'Dr Sam' })
       expect(book.title).to eql('Learn Ruby')
       expect(book.author).to eql('Dr Sam')
     end
