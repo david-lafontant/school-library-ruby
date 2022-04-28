@@ -62,7 +62,7 @@ class App
       book_index = gets.chomp.to_i
     end
     puts 'select a person from the following list by number'
-    # list_of_people = 
+    # list_of_people =
     ListPrinter.print_list(@people.list)
     until person_index > -1 && person_index < @people.list.length
       puts 'person index:'
@@ -70,17 +70,17 @@ class App
     end
     puts 'date: (YYYY/MM/DD): '
     date = gets.chomp
-    #Changes made
-    #Before
-    #Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index))
-    #After
+    # Changes made
+    # Before
+    # Rental.new(date, @people.filter_with_index(person_index), @books.filter_with_index(book_index))
+    # After
     @rentals << Rental.new({ 'date' => date, 'person' => @people.filter_with_index(person_index),
-      'book' => @books.filter_with_index(book_index) })
-   
+                             'book' => @books.filter_with_index(book_index) })
+
     #  save_rentals_data(@rentals)
-    #End 
+    # End
     puts 'Rental created succesfully'
-  
+
     reset
   end
 
@@ -109,6 +109,5 @@ class App
     @storage.write(@books.list, 'books.json')
     @storage.write(@people.list, 'people.json')
     @storage.write(@rentals, 'rentals.json')
-
   end
 end

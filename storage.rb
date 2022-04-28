@@ -17,7 +17,7 @@ class Storage
     component.list = list.map { |item| Kernel.const_get(item['class_name']).new(item['opt']) }
   end
 
-  def rentals_read(rentals, people, books, file)
+  def rentals_read(_rentals, people, books, file)
     return unless File.exist?(file)
 
     content = File.read(file)

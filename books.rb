@@ -1,4 +1,3 @@
-
 class Books
   attr_accessor :list
 

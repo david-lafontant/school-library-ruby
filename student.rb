@@ -16,7 +16,7 @@ class Student < Person
     @classroom = classroom
     classroom.students.push(self) unless classroom.students.include?(self)
   end
-  
+
   def to_object
     { class_name: 'Student', opt: { classroom: @classroom, id: @id, name: @name, age: @age,
                                     parent_permission: @parent_permission } }

@@ -48,7 +48,7 @@ class CreateStudent < CreatePerson
       end
     end
     Student.new({ 'classroom' => nil, 'age' => @age, 'id' => Random.rand(1..1000), 'name' => @name,
-      'parent_permission' => permision })
+                  'parent_permission' => permision })
   end
 end
 

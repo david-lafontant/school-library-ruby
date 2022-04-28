@@ -11,7 +11,7 @@ class Book
     @rentals = []
   end
 
-  def add_rental(date,person)
+  def add_rental(date, person)
     Rental.new({ 'date' => date, 'person' => person, 'book' => self })
   end
 
