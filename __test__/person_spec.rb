@@ -23,8 +23,6 @@ describe Person do
       expect(person.can_use_services?).to be(true)
     end
 
-
-
     it 'return an object who is an instance of Rental class' do
       person = Person.new(30, 17, 'Sam')
       book = Book.new({ 'title' => 'Ruby in Ruby', 'author' => 'Dr David' })
