@@ -23,7 +23,7 @@ class Storage
     content = File.read(file)
     list = JSON.parse(content)
 
-    rentals = list.map do |item|
+    _rentals = list.map do |item|
       Rental.new({ 'date' => item['date'], 'person' => people.filter_with_id(item['person']),
                    'book' => books.filter_with_title(item['book']) })
     end
